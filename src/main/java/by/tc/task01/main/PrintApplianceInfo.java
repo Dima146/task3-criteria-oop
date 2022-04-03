@@ -2,13 +2,18 @@ package by.tc.task01.main;
 
 import by.tc.task01.entity.Appliance;
 
-public class PrintApplianceInfo {
-	
-	public static void print(Appliance appliance) {
-		// you may add your own code here
-		
-	}
-	
-	// you may add your own code here
+import java.util.List;
 
-}
+public final class PrintApplianceInfo {
+
+	private PrintApplianceInfo() {
+	}
+	public static void print(List<Appliance> appliances) {
+		if (!appliances.isEmpty()) {
+			for (Appliance appliance : appliances) {
+				System.out.println(appliance.toString() + "\n");
+			}
+		} else System.out.print("Appliance is not found ");
+		}
+	}
+

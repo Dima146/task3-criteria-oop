@@ -48,7 +48,7 @@ public final class AppliancesBuilder {
         return appliance;
     }
 
-    public Appliance RefrigeratorBuild(Map<String, Object> map, Criteria criteria) {
+    public Appliance refrigeratorBuild(Map<String, Object> map, Criteria criteria) {
         if (Refrigerator.class.getSimpleName().equals(criteria.getGroupSearchName())) {
             appliance = new Refrigerator.RefrigeratorBuilder()
                     .withAvailableQuantity(parseInt((String) map.get(SearchCriteria.Refrigerator.AVAILABLE_QUANTITY.toString())))
@@ -65,7 +65,7 @@ public final class AppliancesBuilder {
         return appliance;
     }
 
-    public Appliance SpeakersBuild(Map<String, Object> map, Criteria criteria) {
+    public Appliance speakersBuild(Map<String, Object> map, Criteria criteria) {
         if (Speakers.class.getSimpleName().equals(criteria.getGroupSearchName())) {
             appliance = new Speakers.SpeakersBuilder()
                     .withAvailableQuantity(parseInt((String) map.get(SearchCriteria.Speakers.AVAILABLE_QUANTITY.toString())))
@@ -80,7 +80,7 @@ public final class AppliancesBuilder {
         return appliance;
     }
 
-    public Appliance TabletPCBuild(Map<String, Object> map, Criteria criteria) {
+    public Appliance tabletPCBuild(Map<String, Object> map, Criteria criteria) {
         if (TabletPC.class.getSimpleName().equals(criteria.getGroupSearchName())) {
             appliance = new TabletPC.TabletPCBuilder()
                     .withAvailableQuantity(parseInt((String) map.get(SearchCriteria.TabletPC.AVAILABLE_QUANTITY.toString())))

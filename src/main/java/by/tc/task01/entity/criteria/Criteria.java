@@ -24,4 +24,17 @@ public class Criteria {
 		return criteria;
 	}
 
+	public boolean compareTwoMaps(Map<String,Object> comparedMap) {
+		boolean result = false;
+		for (Map.Entry<String, Object> criteriaElement : criteria.entrySet()) {
+			for (Map.Entry<String, Object> comparedMapElement : comparedMap.entrySet()) {
+				result =  ((criteriaElement.getKey().equals(comparedMapElement.getKey()))
+						&& criteriaElement.getValue().toString().equalsIgnoreCase(String.valueOf(comparedMapElement.getValue())));
+
+				}
+			}
+		return result;
+	}
+
 }
+
